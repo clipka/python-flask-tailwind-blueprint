@@ -21,17 +21,16 @@ A blueprint of a flask based web application that uses Tailwind CSS for front en
 
 ## Installation
 
-Install virtual environment with
+1. Install virtual environment with `python3 -m venv venv`
+2. Activate the environment `. venv/bin/activate`
+3. Install required python packages `pip install -r requirements.txt`
+4. Initiate Tailwind CSS `tailwindcss init`
 
-`python3 -m venv venv`
+## Development
 
-Activate the environment
+Each time a style in a template is changed, the following command must be run to extend the _main.css_ file
 
-`. venv/bin/activate`
-
-Install required python packages
-
-`pip install -r requirements.txt`
+`tailwindcss -i ./app/static/src/main.css -o ./app/static/dist/main.css --minify`
 
 ## Run
 
