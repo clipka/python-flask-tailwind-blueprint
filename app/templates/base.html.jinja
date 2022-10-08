@@ -11,8 +11,15 @@
 
     <title>Flask + Tailwind CSS</title>
   </head>
-  <body class="bg-blue-100">
+  <body>
     {% block content %}
     {% endblock content %}
+        <script>
+            const button = document.querySelector('#menu-button');
+            const menu = document.querySelector('#menu');
+            button.addEventListener('click', () => {
+                 menu.classList.toggle('hidden');
+            });
+        </script>
   </body>
 </html>

@@ -6,12 +6,13 @@ A blueprint of a flask based web application that uses Tailwind CSS for front en
 ### Backend
 
 - [ ] Flask based Web application with registration and login capabilities
-- [ ] Run with gunicorn
-- [ ] Templates using Jinja2
+- [x] Run with gunicorn
+- [x] Templates using Jinja2
 
 ### Frontend
-- [ ] Tailwind CSS based frontend
+- [x] Tailwind CSS based frontend
 - [ ] Responsive Design for mobile, tablet and big screens
+  - [x] Navigation
 
 
 ### Deployment
@@ -43,3 +44,11 @@ with flask (for development):
 with gunicorn (for production):
 
 `gunicorn --workers 4 --bind 0.0.0.0:8000 wsgi:app`
+
+
+## Credits
+
+Kudos to the ones described how to do things. Without you, I would not be able to create this blueprint that quick.
+
+- Flask Tailwind Integration: https://testdriven.io/blog/flask-htmx-tailwind/
+- Navigation: https://codepen.io/hulyak/pen/yLbwXvB
