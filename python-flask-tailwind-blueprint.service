@@ -1,0 +1,14 @@
+[Unit]
+Description=python-flask-tailwind-blueprint.service - A Flask application run with Gunicorn.
+After=network.target
+
+[Service]
+User=<user>
+Group=www-data
+Environment="PATH=/var/www/python-flask-tailwind-blueprint/.venv/bin"
+WorkingDirectory=/var/www/python-flask-tailwind-blueprint/
+ExecStart=/var/www/python-flask-tailwind-blueprint/.venv/bin/gunicorn --workers 3 \
+--bind unix:/var/www/python-flask-tailwind-blueprint/python-flask-tailwind-blueprint.sock wsgi:app
+
+[Install]
+WantedBy=multi-user.target

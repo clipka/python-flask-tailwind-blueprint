@@ -1,22 +1,23 @@
 # python-flask-tailwind-blueprint
+
 A blueprint of a flask based web application that uses Tailwind CSS for front end design.
 
 ## Features
 
 ### Backend
 
-- [ ] Flask based Web application with registration and login capabilities
+- [x] Flask based Web application with registration and login capabilities
 - [x] Run with gunicorn
 - [x] Templates using Jinja2
 
 ### Frontend
 - [x] Tailwind CSS based frontend
-- [ ] Responsive Design for mobile, tablet and big screens
+- [x] Responsive Design for mobile, tablet and big screens
   - [x] Navigation
 
 
 ### Deployment
-- [ ] systemd service template
+- [x] systemd service template
 
 
 ### User Management
@@ -61,3 +62,4 @@ Kudos to the ones described how to do things. Without you, I would not be able t
 - Flask Tailwind Integration: https://testdriven.io/blog/flask-htmx-tailwind/
 - Navigation: https://codepen.io/hulyak/pen/yLbwXvB
 - Login System: https://github.com/Faruqt/Flask-Complete-Tutorial
+- Deployment: https://dev.to/brandonwallace/deploy-flask-the-easy-way-with-gunicorn-and-nginx-jgc
