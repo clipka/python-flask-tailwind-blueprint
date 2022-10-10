@@ -49,13 +49,30 @@
             </a>
         </li>
         <!-- Insert more pages here-->
+        {% if current_user.is_authenticated %}
+        <li>
+            <a
+            class="md:p-4 py-2 block hover:text-teal-400"
+            href="{{ url_for("profile") }}"
+            >Profil</a>
+        </li>
+        {% endif %}
+        {% if current_user.is_authenticated %}
         <li>
             <a
             class="md:p-4 py-2 block hover:text-teal-400 text-teal-500"
-            href="#"
+            href="{{ url_for("auth.logout") }}"
+            >Ausloggen</a>
+        <li>
+        {% else %}
+        <li>
+            <a
+            class="md:p-4 py-2 block hover:text-teal-400 text-teal-500"
+            href="{{ url_for('auth.login') }}"
             >Sign Up</a
             >
         </li>
+        {% endif %}
         </ul>
     </div>
 </nav>

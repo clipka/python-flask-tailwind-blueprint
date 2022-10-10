@@ -1,0 +1,42 @@
+{% extends "base.html.jinja" %}
+{% include "navbar.html.jinja" %}
+{% block content %}
+<section class="h-screen">
+  <div class="px-6 h-full text-gray-800">
+    <div class="flex xl:justify-center justify-center items-center flex-wrap h-full">
+      <div class="xl:ml-20 mb-12 md:mb-0 w-3/4 sm:w-1/3">
+        <!-- Display login error message-->
+        {% if message %}
+        <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mb-4" role="alert">
+          <p>Invalid username or password</p>
+        </div>
+        {% endif %}
+        <!-- Display form -->
+          <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="mb-6">
+            {{ form.email(class_="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none") }}
+            {% for error in form.email.errors %}
+              <span class="text-orange-700">[{{ error }}]</span>
+            {% endfor %}
+            </div>
+            <div class="mb-6">
+            {{ form.password(class_="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none") }}
+            {% for error in form.password.errors %}
+              <span class="text-orange-700">[{{ error }}]</span>
+            {% endfor %}
+            </div>
+            <div class="mb-6">
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            </div>
+            <div class="text-center lg:text-left">
+                {{ form.submit(class_="px-7 py-3 bg-zinc-700 text-white font-medium text-sm leading-snug uppercase rounded shadow-md btn-login") }}
+            </div>
+          </form>
+          <p class="text-sm font-semibold mt-2 pt-1 mb-0">Dont have an account yet?</p>
+          <a class="text-teal-700" href="{{ url_for('auth.register') }}">Register</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock  %}

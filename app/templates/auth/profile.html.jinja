@@ -1,0 +1,8 @@
+{% extends "base.html.jinja" %}
+{% include "navbar.html.jinja" %}
+{% block content %}
+    <div class="w-full mx-10">
+        <h2 class="text-2xl font-normal leading-normal mt-0 mb-2 text-teal-800">Hallo {{ user.username }}!</h2>
+        <h2 class="text-2xl font-normal leading-normal mt-0 mb-2 text-teal-800">Hallo {{ user.email }}!</h2>
+    </div>
+{% endblock %}

@@ -19,6 +19,14 @@ A blueprint of a flask based web application that uses Tailwind CSS for front en
 - [ ] systemd service template
 
 
+### User Management
+
+By default, the application has an in memory database _memrepo_ with exactly one user:
+
+- username: _"test@user.com"_
+- password: _"p4ssword!"_
+
+WARNING: You should add a preferred data base. Since _repo_ abstracts all data base accesses, it should be easy to replace the _memrepo_ with any other database.
 
 ## Installation
 
@@ -52,3 +60,4 @@ Kudos to the ones described how to do things. Without you, I would not be able t
 
 - Flask Tailwind Integration: https://testdriven.io/blog/flask-htmx-tailwind/
 - Navigation: https://codepen.io/hulyak/pen/yLbwXvB
+- Login System: https://github.com/Faruqt/Flask-Complete-Tutorial
